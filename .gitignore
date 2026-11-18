@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+.DS_Store
+data/cache/
+scandi_races_2025/data/cache/
+.superpowers/
