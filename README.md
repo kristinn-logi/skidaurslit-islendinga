@@ -114,6 +114,40 @@ This checks the metrics computed by `app/metrics.js` against the reference value
 - `comparison_is.html`: the original static comparison report, used as the reference for the metrics test
 - `scandi_races_2025/`: a separate analysis that uses the same scraper. It collects men's races in Scandinavia (Nov–Dec 2025), recomputes each race's real penalty when FIS has raised it to the category minimum (`penalty.py`), and ranks races by how favourable they were for first-year athletes to score points (`ranking.py`). Run it from inside that folder with `../.venv/bin/python scrape_races.py --help`.
 
+## Deployment
+
+The dashboard is served by GitHub Pages straight from `app/`. Publishing is done by the workflow in `.github/workflows/refresh.yml`.
+
+**Schedule.** The workflow scrapes FIS and rebuilds the data every day at 22:00 UTC from October to April, and on Mondays at 22:00 UTC from May to September. You can also start it at any time from the Actions tab ("Refresh data and deploy" → **Run workflow**) or with `gh workflow run refresh.yml`. A push to `main` skips the scrape and only redeploys the site.
+
+**Where things live.** The CSVs in `data/` and `app/data.js` are committed to the repo. When a refresh changes them, `github-actions[bot]` commits them as `data: refresh YYYY-MM-DD`. The scrape cache (`data/cache/`) is not committed. It lives in the Actions cache, and GitHub evicts it after 7 days without use. Without the cache the next run downloads everything again, which takes about 10–15 minutes.
+
+**Checks that block a bad refresh.** Before committing, the workflow runs `scripts/check_data.py` against the previous commit's data, then `node tests/test_metrics.js`. The run fails if:
+
+- any of `athletes.csv`, `points_lists.csv` or `results.csv` is missing or has no data rows
+- the number of athletes falls below 80% of the previous count
+- the newest points list id goes down
+- the number of result rows falls below 90% of the previous count
+- the metrics test fails
+
+A failed run commits nothing and deploys nothing, so the site keeps its last good data. GitHub emails the repo owner about the failed run.
+
+**If FIS blocks GitHub's runners** (the scrape fails with repeated 403/429 retries), refresh locally and push:
+
+```sh
+./refresh.sh
+git add data/*.csv app/data.js && git commit -m "data: local refresh" && git push
+```
+
+The push deploys the new data without scraping.
+
+**Running the check yourself:**
+
+```sh
+.venv/bin/python scripts/check_data.py --new data --prev path/to/previous/data
+.venv/bin/python -m unittest tests/test_check_data.py
+```
+
 ## Data source
 
 All data comes from public pages on [fis-ski.com](https://www.fis-ski.com). The scraper spaces out its requests and caches responses, so please keep the delay reasonable.
