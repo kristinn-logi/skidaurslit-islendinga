@@ -58,7 +58,9 @@ jobs:
           done
 
       - name: Scrape FIS
-        run: python fis_scraper.py
+        # FIS throttles GitHub's runners on the points-list exports when the
+        # scraper's default 4 workers / 0.4 s delay is used, so go slower here.
+        run: python fis_scraper.py --workers 1 --delay 1.5
 
       - name: Build app data
         run: python build_data.py
