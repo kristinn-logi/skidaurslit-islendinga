@@ -838,6 +838,7 @@ fis_code,name,date,season,place,nation,category_code,category,discipline,discipl
 250474,Jon Erik Sigurdsson,2026-11-14,2027,Kaabdalis,SWE,FIS,FIS,Slalom,SL,DNF1,,DNF1,,,132232,Alpine Skiing FIS,Men's Slalom,448,49,,,,,,Did not finish 1st run,109,41,1:39.74,27.16
 250474,Jon Erik Sigurdsson,2026-11-15,2027,Kaabdalis,SWE,FIS,FIS,Slalom,SL,DNF1,,DNF1,,,132234,Alpine Skiing FIS,Men's Slalom,451,49,,,,,,Did not finish 1st run,106,54,1:37.18,27.78
 250474,Jon Erik Sigurdsson,2026-11-25,2027,Suomu,FIN,EC,European Cup,Slalom,SL,DNF1,,DNF1,,,131750,Alpine Skiing European Cup,Men's Slalom,340,92,,,,,,Did not finish 1st run,103,47,1:45.56,15.00
+250474,Jon Erik Sigurdsson,2026-11-26,2027,Suomu,FIN,EC,European Cup,Slalom,SL,DNF1,,DNF1,,,131751,Alpine Skiing European Cup,Men's Slalom,341,91,,,,,,Did not finish 1st run,102,55,1:42.52,15.02
 250476,Petur Reidar Petursson,2021-12-11,2022,Alpe Cermis,ITA,CIT,CIT,Giant Slalom,GS,93,93,,198.6,,110626,Alpine Skiing FIS,Men's Giant Slalom,1336,108,1:01.74,59.65,2:01.39,+16.94,16.22,,133,105,1:44.45,34.80
 250476,Petur Reidar Petursson,2021-12-12,2022,Alpe Cermis,ITA,CIT,CIT,Slalom,SL,DNF1,,DNF1,,,110628,Alpine Skiing FIS,Men's Slalom,1340,107,,,,,,Did not finish 1st run,128,67,1:31.50,46.60
 250476,Petur Reidar Petursson,2021-12-15,2022,KnittelTirol Elbigenalp,AUT,FIS,FIS,Slalom,SL,DSQ2,,DSQ2,,,111199,Alpine Skiing FIS,Men's Slalom,447,25,,,,,,Disqualified 2nd run,28,23,1:19.01,36.87
@@ -1607,6 +1608,7 @@ fis_code,name,date,season,place,nation,category_code,category,discipline,discipl
 250481,Matthias Kristinsson,2026-11-14,2027,Kaabdalis,SWE,FIS,FIS,Slalom,SL,DNF2,,DNF2,,,132232,Alpine Skiing FIS,Men's Slalom,448,17,,,,,,Did not finish 2nd run,109,41,1:39.74,27.16
 250481,Matthias Kristinsson,2026-11-15,2027,Kaabdalis,SWE,FIS,FIS,Slalom,SL,18,18,,40.17,,132234,Alpine Skiing FIS,Men's Slalom,451,17,48.89,49.94,1:38.83,+1.65,1.7,,106,54,1:37.18,27.78
 250481,Matthias Kristinsson,2026-11-25,2027,Suomu,FIN,EC,European Cup,Slalom,SL,DNF1,,DNF1,,,131750,Alpine Skiing European Cup,Men's Slalom,340,72,,,,,,Did not finish 1st run,103,47,1:45.56,15.00
+250481,Matthias Kristinsson,2026-11-26,2027,Suomu,FIN,EC,European Cup,Slalom,SL,48,48,,46.71,,131751,Alpine Skiing European Cup,Men's Slalom,341,69,56.58,50.39,1:46.97,+4.45,4.34,,102,55,1:42.52,15.02
 250482,Marteinn Heidarsson,2022-01-04,2022,Tarvisio,ITA,NJR,National Junior Race,Slalom,SL,36,36,,211.27,,110382,Alpine Skiing National Junior Race,Men's Slalom,1369,96,56.77,1:00.94,1:57.71,+19.65,20.04,,80,40,1:38.06,64.99
 250482,Marteinn Heidarsson,2022-01-09,2022,Bormio,ITA,NJR,National Junior Race,Slalom,SL,31,31,,164.18,,112023,Alpine Skiing FIS,Men's Slalom,1234,96,47.96,48.94,1:36.90,+11.01,12.82,,58,33,1:25.89,70.60
 250482,Marteinn Heidarsson,2022-01-29,2022,Reykjavik,ISL,ENL,Entry League FIS,Slalom,SL,DNF2,,DNF2,,,112858,Alpine Skiing Entry League FIS,Men's Slalom,1292,11,,,,,,Did not finish 2nd run,17,14,1:05.18,106.74
